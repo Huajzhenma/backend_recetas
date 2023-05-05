@@ -5,4 +5,3 @@ class CocinaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cocina
         fields = ('id','name', 'description')
-        read_only_fields = ('name', 'description')
