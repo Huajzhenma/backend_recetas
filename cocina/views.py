@@ -7,7 +7,7 @@ from cocina.serializers import CocinaSerializer
 @api_view(['GET', 'POST','DELETE'])
 def cocina_list(request, id = None):
     """
-    List all code Books, or create a new Book.
+    List all 
     """
     if request.method == 'GET':
         cocina = Cocina.objects.all()

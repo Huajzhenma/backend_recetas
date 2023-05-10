@@ -11,7 +11,7 @@ def users_list(request, id = None):
     """
     if request.method == 'GET':
         users = User.objects.all()
-        serializer = UsersSerializer(cocina, many=True)
+        serializer = UsersSerializer(users, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
@@ -30,6 +30,6 @@ def users_list(request, id = None):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     elif request.method == 'DELETE':
-        cocina = User.objects.filter(id = id)
-        cocina.delete()
+        users = User.objects.filter(id = id)
+        users.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)   
