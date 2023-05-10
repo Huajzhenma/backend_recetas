@@ -1,8 +1,10 @@
-from rest_framework import routers
-from .api import CocinaViewSet
+from django.urls import path
+from cocina import views
 
-router = routers.DefaultRouter()
 
-router.register('api/recetas', CocinaViewSet, 'Recetas')
-
-urlpatterns = router.urls 
+urlpatterns = [
+    path('api/recetas/<int:id>/'
+         , views.cocina_list),  
+    path('api/recetas/'
+     , views.cocina_list),    
+]
