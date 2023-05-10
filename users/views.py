@@ -5,9 +5,9 @@ from users.models import User
 from users.serializers import UsersSerializer
 
 @api_view(['GET', 'POST','DELETE'])
-def cocina_list(request, id = None):
+def users_list(request, id = None):
     """
-    List all code Books, or create a new Book.
+    List all users
     """
     if request.method == 'GET':
         users = User.objects.all()

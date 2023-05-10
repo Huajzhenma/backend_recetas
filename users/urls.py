@@ -1,10 +1,10 @@
 from django.urls import path
-from cocina import views
+from users import views
 
 
 urlpatterns = [
     path('api/users/<int:id>/'
-         , views.cocina_list),  
+         , views.users_list),  
     path('api/users/'
-     , views.cocina_list),    
+     , views.users_list),    
 ]
